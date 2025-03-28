@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/techbyvivekyadav/todo-list/static/css/main.a4028db0.css",
+    "main.js": "/techbyvivekyadav/todo-list/static/js/main.12df5e24.js",
+    "static/js/453.b467febd.chunk.js": "/techbyvivekyadav/todo-list/static/js/453.b467febd.chunk.js",
+    "index.html": "/techbyvivekyadav/todo-list/index.html",
+    "main.a4028db0.css.map": "/techbyvivekyadav/todo-list/static/css/main.a4028db0.css.map",
+    "main.12df5e24.js.map": "/techbyvivekyadav/todo-list/static/js/main.12df5e24.js.map",
+    "453.b467febd.chunk.js.map": "/techbyvivekyadav/todo-list/static/js/453.b467febd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4028db0.css",
+    "static/js/main.12df5e24.js"
+  ]
+}
