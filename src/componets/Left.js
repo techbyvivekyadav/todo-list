@@ -13,6 +13,7 @@ const Left = (props) => {
                 <div className='todo-list'>   
                     {
                         props.mylist.map((item) => {   
+                            
                             return (<div className='box' key={item.sno}>
                                 <h3>{item.title}</h3>
                                 <span>{item.disc}</span>

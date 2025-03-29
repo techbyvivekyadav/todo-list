@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Header from './componets/Header';
 import Footer from './componets/Footer';
@@ -6,23 +6,19 @@ import Left from './componets/Left';
 import Right from './componets/Right';
 
 function App() {
-  
-  const [mylist, setMylist] = useState([{
-    title: 'Learn About React',
-    disc: 'Complete html, CSS and javascript after than learn about react.',
-    status: false,
-    sno: 1
-  }, {
-    title: 'Learn About Git and github',
-    disc: 'Create your profile on github and learn about git and github.',
-    status: false,
-    sno: 2
-  }, {
-    title: 'Get an internship at 30 Apr 2025',
-    disc: 'Learn more and get your gol to achiveval poit.',
-    status: false,
-    sno: 3
-  }]);
+
+  const [mylist, setMylist] = useState([]);
+
+  useEffect(() => {
+      setMylist(JSON.parse(localStorage.getItem('key')));      
+}, []);
+
+  useEffect(() => {
+    localStorage.setItem('key', JSON.stringify(mylist)); 
+    console.log('update');
+    console.log(mylist);
+    
+  }, [mylist]);
 
   const deleteItem = (list) => {
     setMylist(mylist.filter((e) => {
@@ -39,10 +35,11 @@ function App() {
       alert("Enter details");
     } else {
       let sno;
-      if (mylist.length<=0) {
-        let sno = 0;
+      if (mylist.length <= 0) {
+        sno = 1;
       } else {
-        let sno = mylist[mylist.length - 1].sno;
+        sno = mylist[mylist.length-1].sno+1;
+        console.log(sno);  
       }
       const myItem = {
         sno: sno,
